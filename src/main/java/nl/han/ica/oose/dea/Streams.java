@@ -45,7 +45,7 @@ class Streams {
     }
 
     int calculateTotalCostOfAllProducts(List<Product> products) {
-        var totalCost = products.stream().mapToInt(Product::getPrice).reduce(0, (p1, p2) -> p1 + p2);
+        var totalCost = products.stream().mapToInt(Product::getPrice).sum();
         return totalCost;
     }
 }
